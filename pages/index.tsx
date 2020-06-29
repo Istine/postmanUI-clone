@@ -75,7 +75,7 @@ const Home: React.FunctionComponent = () => {
                 variant="outlined"
                 size="small"
                 fullWidth
-                type="password"
+                type='password'
               ></StyledTextField>
               <Box
                 width="100%"
@@ -118,8 +118,11 @@ const Home: React.FunctionComponent = () => {
                 display="flex"
                 justifyContent="center"
                 margin="15px 0"
+                alignItems='center'
               >
-                <span style={{ color: "#aaa" }}>vs</span>
+                <div style={{width:'150px', backgroundColor:'#eee', height:'2px'}}></div>
+                <span style={{ color: "#999", margin:'0 10px', fontWeight:'bold' }}>or</span>
+                <div style={{width:'150px', backgroundColor:'#eee', height:'2px'}}></div>
               </Box>
               <StyledButtonGoogle variant="contained" color="primary" fullWidth>
                 <i
@@ -213,7 +216,7 @@ const Home: React.FunctionComponent = () => {
                   <span style={{ color: "orange" }}>Sign in</span> and Instead?
                 </label>
               </Box>
-              <label style={{ fontSize: "13px", fontWeight: "bold" }}>
+              <label style={{ fontSize: "11px", fontWeight: "bold" }}>
                 Email
               </label>
               <StyledTextField
@@ -222,7 +225,7 @@ const Home: React.FunctionComponent = () => {
                 size="small"
                 fullWidth
               />
-              <label style={{ fontSize: "13px", fontWeight: "bold" }}>
+              <label style={{ fontSize: "11px", fontWeight: "bold" }}>
                 Username
               </label>
               <StyledTextField
@@ -237,10 +240,10 @@ const Home: React.FunctionComponent = () => {
                 display="flex"
                 justifyContent="space-between"
               >
-                <label style={{ fontSize: "13px", fontWeight: "bold" }}>
+                <label style={{ fontSize: "11px", fontWeight: "bold" }}>
                   Password
                 </label>
-                <a style={{ color: "#ccc", cursor: "pointer" }}>SHOW</a>
+                <a style={{ color: "#ccc", cursor: "pointer", fontSize:'12px' }}>SHOW</a>
               </Box>
               <StyledTextField
                 id="outlined-size-small"
@@ -290,14 +293,17 @@ const Home: React.FunctionComponent = () => {
                 display="flex"
                 justifyContent="center"
                 margin="15px 0"
+                alignItems='center'
               >
-                <span style={{ color: "#aaa" }}>vs</span>
+                <div style={{width:'150px', backgroundColor:'#eee', height:'2px'}}></div>
+                <span style={{ color: "#aaa", margin:'0 10px', fontWeight:'bold' }}>or</span>
+                <div style={{width:'150px', backgroundColor:'#eee', height:'2px'}}></div>
               </Box>
               <StyledButtonGoogle variant="contained" color="primary" fullWidth>
                 <i
                   style={{ position: "absolute", left: "10px" }}
                   className="fab fa-google"
-                ></i>
+                ></i> 
                 Sign up with Google
               </StyledButtonGoogle>
               </Typography>
@@ -314,7 +320,7 @@ const Home: React.FunctionComponent = () => {
 
         .labels {
           font-weight: bold;
-          font-size: "11px";
+          font-size: "10px";
         }
       `}</style>
     </div>
@@ -346,8 +352,8 @@ const StyledTextField = withStyles({
     "&:hover fieldset": {
       borderColor: "orange !important",
     },
-    "&:focus fieldset": {
-      borderColor: "yellow !important",
+    "&:focus": {
+      borderColor: "red !important",
     },
   },
 })(TextField);
